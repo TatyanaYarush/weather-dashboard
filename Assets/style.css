@@ -28,14 +28,13 @@ button{
 }
 
 button:hover {
-    background-color: #feca57;
+    background-color: #68bbcf;
 }
 
 button:focus {
     border: none;
     outline-color: #b2bec3;
 }
-
 
 h1, h3, p, li {
     font-family: 'Roboto', sans-serif;
@@ -81,12 +80,10 @@ input {
     height: 40%;
 }
 
-
  .five-day-container h1 {
     margin-top: 55px;
     
 }
-
 
 input {
     height: 40px;
