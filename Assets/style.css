@@ -19,8 +19,8 @@ header {
 }
 
 button{
-    width: 70px;
-    height: auto;
+    width: 75px;
+    height: 35px;
     background-color: #3476da;
     border: none;
     border-radius: 5px;
@@ -71,6 +71,11 @@ input {
     font-size: 20px;
 }
 
+.card-row {
+    display: flex;
+    flex-direction: row;
+}
+
 .forecast {
     margin-top: 25px;
     border: solid 1px #cecfd2;
@@ -80,14 +85,83 @@ input {
     height: 40%;
 }
 
+.five-day-container {
+    margin: 20px;
+    padding: 80px;
+    position: absolute;
+    left: 235px;
+}
+
  .five-day-container h1 {
     margin-top: 55px;
+    margin-left: 5%;
     
 }
 
-input {
-    height: 40px;
+.five-day-card {
+    margin-left: 20px;
+    width: 180px;
+    height: auto;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    background-color: #3498db;
+}
+
+.five-day-container .card-text {
+    margin-bottom: 15px;
+    padding: 10px 30px 5px 10px;
+}
+
+.five-day-card h3 {
+    margin: 5px;
+}
+
+.five-day-card img {
+    margin-left: 10%;
+}
+
+.historyItems {
+    margin-top: 20px;
+}
+
+.historyItems:nth-child() {
+    margin-top: 20px;
+}
+
+img {
     width: auto;
+    height: auto;
+}
+
+li:first-child {
+    height: 100%;
+    font-size: larger;
+    background-color: white;
+    border: solid 1px #cecfd2;
+    border-radius: 6px 6px 0px 0px;
+    padding: 12px 5px 12px 15px;
+    list-style: none;
+}
+
+li {
+    height: 100%;
+    font-size: larger;
+    background-color: white;
+    border: solid 1px #cecfd2;
+    border-radius: 0px 0px 0px 0px;
+    padding: 12px 5px 12px 15px;
+    list-style: none;
+}
+
+li:last-child {
+    height: 100%;
+    font-size: larger;
+    background-color: white;
+    border: solid 1px #cecfd2;
+    border-radius: 0px 0px 6px 6px;
+    padding: 12px 5px 12px 15px;
+    list-style: none;
 }
 
 .row {
