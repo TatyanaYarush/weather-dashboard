@@ -20,7 +20,7 @@ header {
 
 button{
     width: 75px;
-    height: 35px;
+    height: auto;
     background-color: #3476da;
     border: none;
     border-radius: 5px;
@@ -85,21 +85,21 @@ input {
     height: 40%;
 }
 
-.five-day-container {
+/* .five-day-container {
     margin: 20px;
     padding: 80px;
     position: absolute;
     left: 235px;
-}
+} */
 
  .five-day-container h1 {
-    margin-top: 55px;
+    margin-top: 25px;
     margin-left: 5%;
     
 }
 
 .five-day-card {
-    margin-left: 20px;
+    margin-left: 58px;
     width: 180px;
     height: auto;
     border-radius: 5px;
@@ -132,6 +132,11 @@ input {
 img {
     width: auto;
     height: auto;
+}
+
+input {
+    height: 40px;
+    width: auto;
 }
 
 li:first-child {
