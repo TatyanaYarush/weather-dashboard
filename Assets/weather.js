@@ -5,7 +5,7 @@ var apiKey = "0958bd1155a3f8fcc1d1b82c92089c33";
 var searchBtn = $(".searchBtn");
 var searchInput = $(".searchInput");
 
-var searchCity = "ottawa";
+var searchCity = "";
 var weatherContent;
 
 //fetch function
@@ -83,13 +83,13 @@ function renderWeatherData(cityName, cityTemp, cityHumidity, cityWindSpeed, city
     currentDateEl.text(`(${today})`)
     tempEl.text(`Temperature: ${cityTemp} °C`);
     humidityEl.text(`Humidity: ${cityHumidity}%`);
-    windSpeedEl.text(`Wind Speed: ${cityWindSpeed} MPH`);
+    windSpeedEl.text(`Wind Speed: ${cityWindSpeed} km/h`);
     uvIndexEl.text(`UV Index: ${uvVal}`);
     weatherIconEl.attr("src", cityWeatherIcon);
 }
 
 function getWeather(desiredCity) {
-    var queryUrl = `https://api.openweathermap.org/data/2.5/weather?q=${desiredCity}&appid=${apiKey}&units=imperial`;
+    var queryUrl = `https://api.openweathermap.org/data/2.5/weather?q=${desiredCity}&appid=${apiKey}&units=metric`;
     $.ajax({
         url: queryUrl,
         method: "GET"
@@ -103,7 +103,7 @@ function getWeather(desiredCity) {
                 cityUVIndex: weatherData.coord,
                 cityWeatherIconName: weatherData.weather[0].icon
             }
-            var queryUrl = `https://api.openweathermap.org/data/2.5/uvi?lat=${cityObj.cityUVIndex.lat}&lon=${cityObj.cityUVIndex.lon}&appid=${apiKey}&units=imperial`
+            var queryUrl = `https://api.openweathermap.org/data/2.5/uvi?lat=${cityObj.cityUVIndex.lat}&lon=${cityObj.cityUVIndex.lon}&appid=${apiKey}&units=metric`
             $.ajax({
                 url: queryUrl,
                 method: 'GET'
@@ -147,7 +147,7 @@ function getWeather(desiredCity) {
 
     function getFiveDayForecast() {
         cardRow.empty();
-        var queryUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${desiredCity}&appid=${apiKey}&units=imperial`;
+        var queryUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${desiredCity}&appid=${apiKey}&units=metric`;
         $.ajax({
             url: queryUrl,
             method: "GET"
@@ -171,7 +171,7 @@ function getWeather(desiredCity) {
 
 function createForecastCard(date, icon, temp, humidity) {
 
-    // HTML elements we will create to later
+    // HTML elements 
     var fiveDayCardEl = $("<div>").attr("class", "five-day-card");
     var cardDate = $("<h3>").attr("class", "card-text");
     var cardIcon = $("<img>").attr("class", "weatherIcon");
