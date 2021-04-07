@@ -16,6 +16,7 @@ header {
     font-size: 18px;
     background-color: #234e86;
     padding-top: 23px;
+   
 }
 
 button{
@@ -28,7 +29,7 @@ button{
 }
 
 button:hover {
-    background-color: #68bbcf;
+    background-color: #849aa0;
 }
 
 button:focus {
@@ -37,12 +38,13 @@ button:focus {
 }
 
 h1, h3, p, li {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Comfortaa', cursive;
 }
 
 header h1 {
     margin: 0;
     padding-top: 10px;
+    font-family: 'Comfortaa', cursive;
 }
 
 html {
@@ -106,7 +108,7 @@ input {
     border-radius: 5px;
     color: white;
     font-size: 18px;
-    background-color: #3498db;
+    background-color: #5579a8;
 }
 
 .five-day-container .card-text {
@@ -124,6 +126,7 @@ input {
 
 .historyItems {
     margin-top: 20px;
+    font-weight: bolder;
 }
 
 .historyItems:nth-child() {
@@ -179,3 +182,4 @@ li:last-child {
 .row * {
     margin-right: 5px;
 }
+
