@@ -1,5 +1,7 @@
 # weather-dashboard
 
+[Link to open weather-dashboard](https://tatyanayarush.github.io/weather-dashboard/)
+
 # 06 Server-Side APIs: Weather Dashboard
 
 ## Your Task 123
