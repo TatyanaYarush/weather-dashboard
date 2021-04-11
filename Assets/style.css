@@ -5,6 +5,7 @@
 body {
     height: 100%;
     margin: 0;
+ 
 }
 
 header {
@@ -14,8 +15,10 @@ header {
     margin-top: 0;
     text-align: center;
     font-size: 18px;
-    background-color: #234e86;
     padding-top: 23px;
+    background-color: #234e86;
+    text-shadow: 4px 4px 6px;
+  
    
 }
 
@@ -81,11 +84,14 @@ input {
 
 .forecast {
     margin-top: 25px;
-    border: solid 1px #cecfd2;
+    border: solid 1px #6a6b6e;
+    border-radius: 5px;
     margin-left: 5%;
     min-width: 640px;
     padding: 12px 15px 15px 15px;
     height: 40%;
+    background-color: #92cadb;
+   
 }
 
 /* .five-day-container {
@@ -183,3 +189,26 @@ li:last-child {
     margin-right: 5px;
 }
 
+#currUVI {
+    display: inline-block;
+    border-radius: 6px;
+    padding: 0.6%;
+    margin-top: 6px;
+}
+small {
+    display: flex;
+    text-align: center;
+    font-size: 22px;
+    justify-content: center;
+    margin-top: 15%;
+    color:  #234e86;
+}
+
+/* #note {
+    display: flex;
+    text-align: center;
+    font-size: 22px;
+    /* justify-content: center; */
+    /* margin-top: 8%;
+    color:  #234e86;
+} */ 

@@ -7,7 +7,6 @@ var searchInput = $(".searchInput");
 
 var searchCity = "";
 
-
 //fetch function
 function getTopWeather(searchCity) {
     var apiURL = 'http://api.openweathermap.org/data/2.5/forecast?q=' + searchCity + '&appid=0958bd1155a3f8fcc1d1b82c92089c33';
@@ -85,7 +84,7 @@ function renderWeatherData(cityName, cityTemp, cityHumidity, cityWindSpeed, city
     tempEl.text(`Temperature: ${cityTemp} °C`);
     humidityEl.text(`Humidity: ${cityHumidity}%`);
     windSpeedEl.text(`Wind Speed: ${cityWindSpeed * 3.6}  km/h`);
-    uvIndexEl.text(`UV Index: ${uvVal}`);
+    uvIndexEl.text(` ${uvVal}`);
     weatherIconEl.attr("src", cityWeatherIcon);
 }
 
@@ -97,27 +96,6 @@ function getWeather(desiredCity) {
         method: "GET"
     })
         .then(function (weatherData) {
-
-
-            // // load respone into UviLevel variable
-            // let UviLevel = parseFloat((weatherData).value);
-
-            // // initiate background as violet
-            // let backgrdColor = 'violet';        
-            // // determine backgrouind color depending on value
-            // if (UviLevel < 3) {backgrdColor = 'green';} 
-            //     else if (UviLevel < 6) { backgrdColor = 'yellow';} 
-            //     else if (UviLevel < 8) { backgrdColor = 'orange';} 
-            //     else if (UviLevel < 11) {backgrdColor = 'red';}     
-
-            // // insert UVI Lable and value into HTML
-            // let uviTitle = '<span>UV Index: </span>';
-            // let color = uviTitle + `<span style="background-color: ${backgrdColor}; padding: 0 7px 0 7px;">${response3.value}</span>`;
-            // $('#currUVI').html(color);            
-            // });
-
-            // }
-
             console.log(weatherData);
             var cityObj = {
                 cityName: weatherData.name,
@@ -133,6 +111,38 @@ function getWeather(desiredCity) {
                 method: 'GET'
             })
                 .then(function (uvData) {
+                    // load respone into UviLevel variable
+                    var UviLevel = uvData.value
+                    console.log(uvData.value);
+
+                    // initiate background as violet
+                    var backgrdColor = 'violet';
+                    // determine backgrouind color depending on value
+                    if (UviLevel < 3) { backgrdColor = 'green'; }
+                    else if (UviLevel < 6) { backgrdColor = 'yellow'; }
+                    else if (UviLevel < 8) { backgrdColor = 'orange'; }
+                    else if (UviLevel < 11) { backgrdColor = 'red'; }
+
+                    // insert UVI Lable and value into HTML
+                    var uviTitle = '<span>UV Index: </span>';
+                    var color = uviTitle + `<span style="background-color: ${backgrdColor}">${uvData.value}</span>`;
+                    $('#currUVI').css("background", backgrdColor);
+
+                    //additional features will add in future!
+                    // var note = $("#note");
+                    // if (weatherData.main.temp <= 0) {
+                    //     note = "It's freezing out there, don't forget to wear a coat!"
+                    // } else if (weatherData.main.temp > 0 && weatherData.main.temp <= 12) {
+                    //     note = "It's pretty chilly out there, don't forget your jacket!"
+                    // } else if (weatherData.main.temp > 12 && weatherData.main.temp < 30) {
+                    //     note = "It's a beautiful weather out there, enjoy it!"
+                    // } else if (weatherData.main.temp > 30) { 
+                    //     note = "It's pretty hot out there, don't forget to enjoy a Margarita!"
+                    // } else {
+                    //     note = "Don't forget to bring a towel!"
+                    // }
+                    // $("#note").text(note);
+
                     if (JSON.parse(localStorage.getItem("searchHistory")) == null) {
                         var searchHistoryArr = [];
                         // Keeps user from adding the same city to the searchHistory array list more than once
@@ -194,8 +204,6 @@ function getWeather(desiredCity) {
 }
 
 function createForecastCard(date, icon, temp, humidity) {
-
-    
     var fiveDayCardEl = $("<div>").attr("class", "five-day-card");
     var cardDate = $("<h3>").attr("class", "card-text");
     var cardIcon = $("<img>").attr("class", "weatherIcon");
