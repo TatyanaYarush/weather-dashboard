@@ -42,7 +42,9 @@ The following image shows the web application's appearance and functionality:
 
 ## Screenshots
 
-![new](./images/screenshot weather dasboord.JPG)
+
+
+![screenshot weather dasboord_new](https://user-images.githubusercontent.com/70031550/114319873-4e7bfe00-9ae1-11eb-9721-1b302cf15a08.png)
 
 
 
