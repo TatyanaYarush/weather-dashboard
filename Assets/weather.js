@@ -128,20 +128,20 @@ function getWeather(desiredCity) {
                     var color = uviTitle + `<span style="background-color: ${backgrdColor}">${uvData.value}</span>`;
                     $('#currUVI').css("background", backgrdColor);
 
-                    //additional features will add in future!
-                    // var note = $("#note");
-                    // if (weatherData.main.temp <= 0) {
-                    //     note = "It's freezing out there, don't forget to wear a coat!"
-                    // } else if (weatherData.main.temp > 0 && weatherData.main.temp <= 12) {
-                    //     note = "It's pretty chilly out there, don't forget your jacket!"
-                    // } else if (weatherData.main.temp > 12 && weatherData.main.temp < 30) {
-                    //     note = "It's a beautiful weather out there, enjoy it!"
-                    // } else if (weatherData.main.temp > 30) { 
-                    //     note = "It's pretty hot out there, don't forget to enjoy a Margarita!"
-                    // } else {
-                    //     note = "Don't forget to bring a towel!"
-                    // }
-                    // $("#note").text(note);
+                    // a new feature is added!
+                    var note = $("#note");
+                    if (weatherData.main.temp <= 0) {
+                        note = "It's freezing out there, don't forget to wear a coat!"
+                    } else if (weatherData.main.temp > 0 && weatherData.main.temp <= 12) {
+                        note = "It's pretty chilly out there, don't forget your jacket!"
+                    } else if (weatherData.main.temp > 12 && weatherData.main.temp < 30) {
+                        note = "It's a beautiful weather out there, enjoy it!"
+                    } else if (weatherData.main.temp > 30) { 
+                        note = "It's pretty hot out there, don't forget to enjoy a Margarita!"
+                    } else {
+                        note = "Don't forget to bring a towel!"
+                    }
+                    $("#note").text(note);
 
                     if (JSON.parse(localStorage.getItem("searchHistory")) == null) {
                         var searchHistoryArr = [];
