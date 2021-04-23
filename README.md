@@ -1,3 +1,7 @@
+![GitHub top language](https://img.shields.io/github/languages/top/TatyanaYarush/weather-dashboard?color=red&logo=javascript)
+![GitHub top language](https://img.shields.io/github/languages/top/TatyanaYarush/weather-dashboard?color=green&label=HTML&logo=HTML&logoColor=yellow)
+![GitHub top language](https://img.shields.io/github/languages/top/TatyanaYarush/weather-dashboard?color=greem&label=CSS&logo=CSS&logoColor=green)
+
 # weather-dashboard
 
 [Link to open weather-dashboard](https://tatyanayarush.github.io/weather-dashboard/)
