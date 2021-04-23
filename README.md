@@ -1,5 +1,5 @@
 ![GitHub top language](https://img.shields.io/github/languages/top/TatyanaYarush/weather-dashboard?color=red&logo=javascript)
-![GitHub top language](https://img.shields.io/github/languages/top/TatyanaYarush/weather-dashboard?color=green&label=HTML&logo=HTML&logoColor=yellow)
+![GitHub language count](https://img.shields.io/github/languages/count/TatyanaYarush/weather-dashboard?color=green&label=Languages%20&logo=github&logoColor=green)
 ![GitHub top language](https://img.shields.io/github/languages/top/TatyanaYarush/weather-dashboard?color=greem&label=CSS&logo=CSS&logoColor=green)
 
 # weather-dashboard
